@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SRJ Global Technologies | Careers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="floating-actions">
+      <button class="floating-btn chatbot-btn" aria-label="Chatbot">
+        <i class="fa-solid fa-robot"></i>
+      </button>
+      <a href="https://wa.me/9266594199" target="_blank" class="floating-btn whatsapp-btn" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+      <a href="contact.html" class="floating-btn message-btn" aria-label="Contact">
+        <i class="fa-solid fa-comments"></i>
+      </a>
+    </div>
+    <header class="site-header" id="siteHeader">
+      <div class="nav-shell">
+        <a class="brand" href="index.html" aria-label="SRJ Global Technologies home">
+          <img src="logo-header-DPQ73xcA.png" alt="SRJ Global Technologies logo" />
+          <span class="brand-text"><span class="brand-black">SRJ</span><span class="brand-orange">GLOBAL</span><span class="brand-black">TECHNOLOGIES</span></span>
+        </a>
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <a href="index.html">HOME</a>
+          <a href="services.html">SERVICES</a>
+          <a href="about.html">ABOUT</a>
+          <a href="industries.html">INDUSTRIES</a>
+          <a href="blog.html">BLOG</a>
+          <a href="career.html">CAREERS</a>
+          <a href="admin-login.html">ADMIN</a>
+        </nav>
+        <a class="nav-cta" href="contact.html">CONTACT US</a>
+        <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+      </div>
+      <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+        <a href="index.html">HOME</a>
+        <a href="services.html">SERVICES</a>
+        <a href="about.html">ABOUT</a>
+        <a href="industries.html">INDUSTRIES</a>
+        <a href="blog.html">BLOG</a>
+        <a href="career.html">CAREERS</a>
+        <a class="mobile-cta" href="admin-login.html">ADMIN</a>
+      </nav>
+    </header>
+    <main>
+      <section class="page-hero page-hero-contact">
+        <div class="section-inner reveal">
+          <span class="eyebrow">CAREERS</span>
+          <h1>Join SRJ Global Technologies</h1>
+          <p>Find open roles and apply directly with your resume. We are building websites, apps, and digital experiences for growing brands.</p>
+        </div>
+      </section>
+      <section class="section-inner career-grid reveal">
+        <div class="career-jobs">
+          <div class="section-head">
+            <span class="eyebrow">OPEN ROLES</span>
+            <h2>Current Job Listings</h2>
+            <p>Browse opportunities and apply for the role that matches your skills and growth goals.</p>
+          </div>
+          <div id="jobList" class="job-list"></div>
+        </div>
+        <div class="career-apply">
+          <div class="section-head">
+            <span class="eyebrow">APPLY NOW</span>
+            <h2>Submit Your Application</h2>
+          </div>
+          <form class="job-application-form">
+            <label><span>Name</span><input type="text" name="name" required /></label>
+            <label><span>Email</span><input type="email" name="email" required /></label>
+            <label><span>Phone</span><input type="tel" name="phone" required /></label>
+            <label><span>Job</span><select id="appliedJob" name="appliedJob" required><option value="">Select a job</option></select></label>
+            <label><span>Resume (PDF)</span><input type="file" name="resume" accept="application/pdf" required /></label>
+            <label><span>Message</span><textarea name="coverLetter" rows="5" placeholder="Tell us about your experience"></textarea></label>
+            <button class="btn btn-primary" type="submit">Submit Application</button>
+            <p class="career-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="section-inner footer-grid">
+        <div>
+          <div class="footer-brand">
+            <img src="logo-header-DPQ73xcA.png" alt="SRJ Global Technologies footer logo" />
+            <strong>SRJ Global Technologies</strong>
+          </div>
+          <p>Innovative digital solutions: we build high-quality websites, mobile apps, and e-commerce platforms for growing brands.</p>
+        </div>
+        <div>
+          <h3>Quick Links</h3>
+          <a href="services.html">Services</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+          <a href="admin-login.html">Admin</a>
+        </div>
+        <div>
+          <h3>Get In Touch</h3>
+          <p>Email: <a href="mailto:srjglobaltechnology@gmail.com">srjglobaltechnology@gmail.com</a></p>
+          <p>Phone:<br />+91 96251 90448<br />+91 92667 06599</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright &copy; 2026 SRJ Global Technologies. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="career.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

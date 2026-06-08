@@ -85,13 +85,41 @@ const revealObserver = new IntersectionObserver(
 );
 revealEls.forEach((element) => revealObserver.observe(element));
 if (contactForm) {
-  contactForm.addEventListener('submit', (event) => {
+  contactForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     const status = contactForm.querySelector('.form-status');
+    const formData = new FormData(contactForm);
+    const payload = {
+      fullName: formData.get('name'),
+      email: formData.get('email'),
+      phone: formData.get('phone'),
+      serviceInterested: formData.get('service'),
+      message: formData.get('message')
+    };
+
     if (status) {
-      status.textContent = 'Thank you. Your enquiry has been prepared for the SRJ team.';
+      status.textContent = 'Sending inquiry...';
     }
-    contactForm.reset();
+
+    try {
+      const response = await fetch('/api/v1/contacts', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      const result = await response.json();
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || 'Unable to send inquiry');
+      }
+      if (status) {
+        status.textContent = 'Thank you. Your inquiry has been sent successfully.';
+      }
+      contactForm.reset();
+    } catch (error) {
+      if (status) {
+        status.textContent = `Error: ${error.message}`;
+      }
+    }
   });
 }
 if (serviceItems.length && serviceDetailTitle && serviceDetailText && serviceDetailFeatures && serviceDetailImage) {

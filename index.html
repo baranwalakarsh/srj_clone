@@ -9,28 +9,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   </head>
-  <div class="floating-actions">
-    <button class="floating-btn chatbot-btn" aria-label="Chatbot">
-        <i class="fa-solid fa-robot"></i>
-    </button>
-
-    <a href="https://wa.me/9266594199"
-       target="_blank"
-       class="floating-btn whatsapp-btn"
-       aria-label="WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
-
-    <a href="contact.html"
-       class="floating-btn message-btn"
-       aria-label="Contact">
-        <i class="fa-solid fa-comments"></i>
-    </a>
-</div>
   <body>
+    <div class="floating-actions">
+      <button class="floating-btn chatbot-btn" aria-label="Chatbot">
+        <i class="fa-solid fa-robot"></i>
+      </button>
+
+      <a href="https://wa.me/9266594199"
+         target="_blank"
+         class="floating-btn whatsapp-btn"
+         aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+
+      <a href="contact.html"
+         class="floating-btn message-btn"
+         aria-label="Contact">
+        <i class="fa-solid fa-comments"></i>
+      </a>
+    </div>
+
 <header class="site-header" id="siteHeader">
   <div class="nav-shell">
     <a class="brand" href="index.html" aria-label="SRJ Global Technologies home">
@@ -38,7 +37,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
       <span class="brand-text"><span class="brand-black">SRJ</span><span class="brand-orange">GLOBAL</span><span class="brand-black">TECHNOLOGIES</span></span>
     </a>
     <nav class="desktop-nav" aria-label="Primary navigation">
-      <a href="index.html">HOME</a>
+      <a href="index.html" class="active">HOME</a>
       <a href="services.html">SERVICES</a>
       <a href="about.html">ABOUT</a>
       <a href="industries.html">INDUSTRIES</a>
@@ -62,6 +61,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
       <section class="hero">
         <div class="hero-bg" aria-hidden="true"></div>
         <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-glow hero-glow-left" aria-hidden="true"></div>
+        <div class="hero-glow hero-glow-right" aria-hidden="true"></div>
         <div class="section-inner hero-content reveal">
           <h1>Building Future-Ready <span class="gradient-text">Digital Experiences</span></h1>
           <p>Websites, SEO, Branding, App Development & Marketing — all tailored to drive your business growth and online presence.</p>
@@ -73,19 +74,19 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         <div class="hero-deco" aria-hidden="true"></div>
         <div class="stats-grid reveal">
           <article>
-            <strong><span class="gradient-text">850</span>+</strong>
+            <strong><span class="gradient-text" data-count="850">850</span>+</strong>
             <p>Clients Worldwide</p>
           </article>
           <article>
-            <strong><span class="gradient-text">1,252</span>+</strong>
+            <strong><span class="gradient-text" data-count="1252">1,252</span>+</strong>
             <p>Successful Projects</p>
           </article>
           <article>
-            <strong><span class="gradient-text">10</span>+</strong>
+            <strong><span class="gradient-text" data-count="10">10</span>+</strong>
             <p>Years Experience</p>
           </article>
           <article>
-            <strong>24/7</strong>
+            <strong><span class="gradient-text" data-count="24">24</span>/7</strong>
             <p>Support Available</p>
           </article>
         </div>

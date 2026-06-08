@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SRJ Admin Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="floating-actions">
+      <button class="floating-btn chatbot-btn" aria-label="Chatbot">
+        <i class="fa-solid fa-robot"></i>
+      </button>
+      <a href="https://wa.me/9266594199" target="_blank" class="floating-btn whatsapp-btn" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+      <a href="contact.html" class="floating-btn message-btn" aria-label="Contact">
+        <i class="fa-solid fa-comments"></i>
+      </a>
+    </div>
+    <header class="site-header" id="siteHeader">
+      <div class="nav-shell">
+        <a class="brand" href="index.html" aria-label="SRJ Global Technologies home">
+          <img src="logo-header-DPQ73xcA.png" alt="SRJ Global Technologies logo" />
+          <span class="brand-text"><span class="brand-black">SRJ</span><span class="brand-orange">GLOBAL</span><span class="brand-black">TECHNOLOGIES</span></span>
+        </a>
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <a href="index.html">HOME</a>
+          <a href="services.html">SERVICES</a>
+          <a href="about.html">ABOUT</a>
+          <a href="industries.html">INDUSTRIES</a>
+          <a href="blog.html">BLOG</a>
+          <a href="career.html">CAREERS</a>
+          <a href="admin-login.html">ADMIN</a>
+        </nav>
+        <a class="nav-cta" href="contact.html">CONTACT US</a>
+        <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+      </div>
+      <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+        <a href="index.html">HOME</a>
+        <a href="services.html">SERVICES</a>
+        <a href="about.html">ABOUT</a>
+        <a href="industries.html">INDUSTRIES</a>
+        <a href="blog.html">BLOG</a>
+        <a href="career.html">CAREERS</a>
+        <a class="mobile-cta" href="admin-login.html">ADMIN</a>
+      </nav>
+    </header>
+    <main>
+      <section class="page-hero page-hero-contact">
+        <div class="section-inner reveal">
+          <span class="eyebrow">ADMIN PORTAL</span>
+          <h1>SRJ Global Admin Login</h1>
+          <p>Sign in with your admin credentials to manage jobs, blogs, services, projects, team members and applications.</p>
+        </div>
+      </section>
+      <section class="section-inner admin-login-shell reveal">
+        <div class="admin-panel">
+          <form class="admin-login-form">
+            <label><span>Email</span><input type="email" name="email" required /></label>
+            <label><span>Password</span><input type="password" name="password" required minlength="8" /></label>
+            <button class="btn btn-primary" type="submit">Login</button>
+            <p class="admin-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="section-inner footer-grid">
+        <div>
+          <div class="footer-brand">
+            <img src="logo-header-DPQ73xcA.png" alt="SRJ Global Technologies footer logo" />
+            <strong>SRJ Global Technologies</strong>
+          </div>
+          <p>Innovative digital solutions: we build high-quality websites, mobile apps, and e-commerce platforms for growing brands.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright &copy; 2026 SRJ Global Technologies. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="admin.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

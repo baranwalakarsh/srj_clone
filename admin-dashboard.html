@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SRJ Admin Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="floating-actions">
+      <button class="floating-btn chatbot-btn" aria-label="Chatbot">
+        <i class="fa-solid fa-robot"></i>
+      </button>
+      <a href="https://wa.me/9266594199" target="_blank" class="floating-btn whatsapp-btn" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+      <a href="contact.html" class="floating-btn message-btn" aria-label="Contact">
+        <i class="fa-solid fa-comments"></i>
+      </a>
+    </div>
+    <header class="site-header" id="siteHeader">
+      <div class="nav-shell">
+        <a class="brand" href="index.html" aria-label="SRJ Global Technologies home">
+          <img src="logo-header-DPQ73xcA.png" alt="SRJ Global Technologies logo" />
+          <span class="brand-text"><span class="brand-black">SRJ</span><span class="brand-orange">GLOBAL</span><span class="brand-black">TECHNOLOGIES</span></span>
+        </a>
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <a href="index.html">HOME</a>
+          <a href="services.html">SERVICES</a>
+          <a href="about.html">ABOUT</a>
+          <a href="industries.html">INDUSTRIES</a>
+          <a href="blog.html">BLOG</a>
+          <a href="career.html">CAREERS</a>
+          <a href="admin-login.html">ADMIN</a>
+        </nav>
+        <button class="nav-cta admin-logout" type="button">Logout</button>
+        <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+      </div>
+      <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+        <a href="index.html">HOME</a>
+        <a href="services.html">SERVICES</a>
+        <a href="about.html">ABOUT</a>
+        <a href="industries.html">INDUSTRIES</a>
+        <a href="blog.html">BLOG</a>
+        <a href="career.html">CAREERS</a>
+        <a class="mobile-cta" href="admin-login.html">ADMIN</a>
+      </nav>
+    </header>
+    <main class="admin-dashboard-page">
+      <section class="page-hero page-hero-contact">
+        <div class="section-inner reveal">
+          <span class="eyebrow">ADMIN DASHBOARD</span>
+          <h1>Manage the SRJ Careers and Portfolio Experience</h1>
+          <p>Review contacts, applications, jobs, blogs, services, projects and team members from one admin portal.</p>
+        </div>
+      </section>
+      <section class="section-inner admin-dashboard-shell reveal">
+        <div class="admin-cards" id="metricCards"></div>
+        <div class="admin-panel">
+          <div class="admin-section">
+            <div class="section-head"><span class="eyebrow">CONTACTS</span><h2>Recent Inquiries</h2></div>
+            <div class="table-scroll"><table><thead><tr><th>Name</th><th>Email</th><th>Service</th><th>Status</th></tr></thead><tbody id="contactRows"></tbody></table></div>
+          </div>
+          <div class="admin-section">
+            <div class="section-head"><span class="eyebrow">APPLICATIONS</span><h2>Job Applications</h2></div>
+            <div class="table-scroll"><table><thead><tr><th>Name</th><th>Email</th><th>Job</th><th>Resume</th></tr></thead><tbody id="applicationRows"></tbody></table></div>
+          </div>
+          <div class="admin-section">
+            <div class="section-head"><span class="eyebrow">JOB MANAGEMENT</span><h2>Create or update job roles</h2></div>
+            <form class="resource-form" id="jobForm">
+              <input type="hidden" name="id" />
+              <label><span>Title</span><input type="text" name="title" required /></label>
+              <label><span>Location</span><input type="text" name="location" /></label>
+              <label><span>Experience</span><input type="text" name="experience" /></label>
+              <label><span>Description</span><textarea name="description" rows="4" required></textarea></label>
+              <button class="btn btn-primary" type="submit">Save Job</button>
+            </form>
+            <div id="jobList" class="admin-list"></div>
+          </div>
+          <div class="admin-section">
+            <div class="section-head"><span class="eyebrow">BLOG MANAGEMENT</span><h2>Add or edit blog posts</h2></div>
+            <form class="resource-form" id="blogForm">
+              <input type="hidden" name="id" />
+              <label><span>Title</span><input type="text" name="title" required /></label>
+              <label><span>Author</span><input type="text" name="author" required /></label>
+              <label><span>Description</span><textarea name="content" rows="4" required></textarea></label>
+              <label><span>Image URL</span><input type="text" name="featuredImageUrl" placeholder="https://..." /></label>
+              <button class="btn btn-primary" type="submit">Save Blog</button>
+            </form>
+            <div id="blogList" class="admin-list"></div>
+          </div>
+          <div class="admin-section">
+            <div class="section-head"><span class="eyebrow">SERVICE MANAGEMENT</span><h2>Manage service offerings</h2></div>
+            <form class="resource-form" id="serviceForm">
+              <input type="hidden" name="id" />
+              <label><span>Name</span><input type="text" name="name" required /></label>
+              <label><span>Slug</span><input type="text" name="slug" required /></label>
+              <label><span>Description</span><textarea name="description" rows="4" required></textarea></label>
+              <label><span>Image URL</span><input type="text" name="imageUrl" placeholder="https://..." /></label>
+              <button class="btn btn-primary" type="submit">Save Service</button>
+            </form>
+            <div id="serviceList" class="admin-list"></div>
+          </div>
+          <div class="admin-section">
+            <div class="section-head"><span class="eyebrow">PROJECT MANAGEMENT</span><h2>Manage portfolio projects</h2></div>
+            <form class="resource-form" id="projectForm">
+              <input type="hidden" name="id" />
+              <label><span>Project Name</span><input type="text" name="name" required /></label>
+              <label><span>Client</span><input type="text" name="clientName" /></label>
+              <label><span>Technologies</span><input type="text" name="technologyUsed" placeholder="Comma-separated" /></label>
+              <label><span>Description</span><textarea name="description" rows="4" required></textarea></label>
+              <label><span>Image URL</span><input type="text" name="images" placeholder="https://..." /></label>
+              <button class="btn btn-primary" type="submit">Save Project</button>
+            </form>
+            <div id="projectList" class="admin-list"></div>
+          </div>
+          <div class="admin-section">
+            <div class="section-head"><span class="eyebrow">TEAM MANAGEMENT</span><h2>Manage team members</h2></div>
+            <form class="resource-form" id="teamForm">
+              <input type="hidden" name="id" />
+              <label><span>Name</span><input type="text" name="name" required /></label>
+              <label><span>Designation</span><input type="text" name="designation" required /></label>
+              <label><span>Department</span><input type="text" name="department" /></label>
+              <label><span>Photo URL</span><input type="text" name="profileImageUrl" placeholder="https://..." /></label>
+              <button class="btn btn-primary" type="submit">Save Team Member</button>
+            </form>
+            <div id="teamList" class="admin-list"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="section-inner footer-grid">
+        <div>
+          <div class="footer-brand">
+            <img src="logo-header-DPQ73xcA.png" alt="SRJ Global Technologies footer logo" />
+            <strong>SRJ Global Technologies</strong>
+          </div>
+          <p>Innovative digital solutions: we build high-quality websites, mobile apps, and e-commerce platforms for growing brands.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright &copy; 2026 SRJ Global Technologies. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="admin.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
